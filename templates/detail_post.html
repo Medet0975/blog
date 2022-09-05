@@ -1,0 +1,16 @@
+{% extends "base_page.html" %}
+{% block logo %}
+<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Blog</a></h1>
+								<span>Python_bootcamp_8_30</span>
+							</div>
+{% endblock logo %}
+
+{% block index %}
+
+<h1> {{Post.name}}</h1>
+<p> {{post.description}}</p>
+<img src="{{post.image.url}}"> {{Post.name}}</img>
+<p>{{post.author}}</p>
+{%endblock%}
