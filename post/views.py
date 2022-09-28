@@ -21,6 +21,10 @@ class CreatePostView(generic.CreateView):
     model = Post
     form_class = CreatePostForm
 
+    def form_valid(self, form):
+        form.instance.author =self.request.user
+        return super().form_valid(form)
+
     def get_success_url(self):
         return reverse('index')
 
@@ -28,6 +32,9 @@ class DetailPostView(generic.DetailView):
     template_name = 'detail_post.html'
     model = Post
     context_object_name = "post"
+
+    def get_success_url(self):
+        return reverse('')
 
     # post: Post.objects.get(id=1)
 

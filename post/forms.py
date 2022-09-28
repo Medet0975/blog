@@ -4,4 +4,7 @@ from post.models import Post
 class CreatePostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = "__all__"
+        fields = ("name", "description", "image")
+
+        # def save(self, commit=True):
+

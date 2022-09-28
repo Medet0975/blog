@@ -23,13 +23,14 @@
 							</div>
 							<div class="col-5 col-12-medium">
 								<ul>
-									<li><a href="{%url 'create_post'%}" class="button large icon solid fa-arrow-circle-right">Ok let's go</a></li>
+									<li><a href="{%url 'create_post'%}" class="button large icon solid fa-arrow-circle-right">Create Post</a></li>
 									<li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
+
 {% if user.is_authenticated %}
 			<!-- Features -->
 				<div id="features-wrapper">
@@ -40,8 +41,11 @@
 
 								<!-- Box -->
 
+
+
 									<section class="box feature">
 										<a href="{%url 'detail_post' i.id %}" class="image featured"><img src="{{i.image.url}}" alt="" /></a>
+<!--										<a href="#" class="image featured"><img src="{{i.image.url}}" alt="" /></a>-->
 										<div class="inner">
 											<header>
 
@@ -58,7 +62,7 @@
 						</div>
 					</div>
 				</div>
-{% endif %}
+{%endif%}
 			<!-- Main -->
 				<div id="main-wrapper">
 					<div class="container">
